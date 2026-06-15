@@ -1,7 +1,7 @@
 import { type DependencyList, type RefObject, useEffect, useRef, useState } from "react";
 
 // Shared scaffolding for a 3D device tag (the second-3D-tag wrapper): the SSR guard,
-// the lazy dynamic `import("choui-three")` (so `three`/`cannon-es` stay out of the
+// the lazy dynamic `import("@wondo-app/choui-three")` (so `three`/`cannon-es` stay out of the
 // SSR + main bundle), mounting via the `build` callback, cleanup, and graceful
 // failure — when the engine can't load/render, `failed` flips and the caller renders
 // a non-3D fallback that still performs the tag's function.
@@ -9,7 +9,7 @@ import { type DependencyList, type RefObject, useEffect, useRef, useState } from
 // Reduced-motion is detected once in the hook and passed as `immediate` to the
 // build callback so callers don't each check `matchMedia`.
 
-type ChouiThree = typeof import("choui-three");
+type ChouiThree = typeof import("@wondo-app/choui-three");
 
 export interface Disposable {
   dispose(): void;
@@ -49,7 +49,7 @@ export function use3DDevice(
       typeof window.matchMedia === "function" &&
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    import("choui-three")
+    import("@wondo-app/choui-three")
       .then((mod) => {
         if (cancelled || gen !== genRef.current || !containerRef.current) return;
         handle = build(mod, containerRef.current, { immediate });

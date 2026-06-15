@@ -7,8 +7,8 @@
  * the component classes:
  *
  *   @import "tailwindcss";
- *   @import "choui/preset";
- *   @source "../node_modules/choui/dist";
+ *   @import "@wondo-app/choui/preset";
+ *   @source "../node_modules/@wondo-app/choui/dist";
  *   @plugin "daisyui/theme" { name: "brand"; default: true; ... }   // optional
  *
  * Use this OR the precompiled `./css` stylesheet — not both (see README). */

@@ -6,4 +6,4 @@
 // copy script, resolved through the workspace. The script reads its source
 // relative to its own location, so the same call works from the workspace and
 // from an installed node_modules copy.
-import "choui-three/scripts/copy-assets.mjs";
+import "@wondo-app/choui-three/scripts/copy-assets.mjs";

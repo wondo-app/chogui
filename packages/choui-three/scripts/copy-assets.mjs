@@ -5,7 +5,7 @@
 //   `assetPath + "textures/<name>.webp"`, `assetPath + "sounds/..."`.
 //
 // Usage (from the host project root):
-//   node node_modules/choui-three/scripts/copy-assets.mjs [--dest <dir>]
+//   node node_modules/@wondo-app/choui-three/scripts/copy-assets.mjs [--dest <dir>]
 //
 // `--dest` defaults to `public/assets/choui-three/` under the CWD — the path
 // the engine's DEFAULT_ASSET_PATH expects a Vite/Astro host to serve. The

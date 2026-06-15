@@ -18,7 +18,7 @@ import {
 	phoneChatPack,
 	registerInlineTags,
 	registerSampleRuntimePacks,
-} from "choui";
+} from "@wondo-app/choui";
 
 let bootstrapped = false;
 
@@ -42,4 +42,4 @@ export function bootstrapCatalogTags(): void {
 // built-ins composed (the side effect the host bootstrap also performs).
 bootstrapCatalogTags();
 
-export { getInlineTag, getInlineTagNames, getRegisteredTagStyles } from "choui";
+export { getInlineTag, getInlineTagNames, getRegisteredTagStyles } from "@wondo-app/choui";

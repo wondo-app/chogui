@@ -20,8 +20,8 @@
     "release": "pnpm -r build && changeset publish"
   },
   "dependencies": {
-    "choui": "workspace:*",
-    "choui-three": "workspace:*"
+    "@wondo-app/choui": "workspace:*",
+    "@wondo-app/choui-three": "workspace:*"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.3",

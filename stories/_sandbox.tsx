@@ -15,7 +15,7 @@ import {
 	INLINE_TAG_PROPS,
 	type PropSchema,
 	type PropType,
-} from "choui";
+} from "@wondo-app/choui";
 
 import { StoryMarkup } from "./_story-markup";
 

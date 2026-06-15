@@ -10,7 +10,7 @@ Run it **after** `choui`/`choui-three` are published:
 
 ```bash
 cd examples/smoke-consumer
-npm install            # pulls published choui + choui-three from npm
+npm install            # pulls published @wondo-app/choui + @wondo-app/choui-three from npm
 npm run dev            # vendors choui-three assets → public/, starts Vite
 ```
 
@@ -20,7 +20,7 @@ What it proves:
 2. `<StoryMarkup>` (`choui/markup`) renders authored bracket markup with the
    built-in packs registered.
 3. The precompiled `choui/css` stylesheet styles it with **no Tailwind in this
-   app** (the zero-config path). Swap to `@import "choui/preset"` in a Tailwind
+   app** (the zero-config path). Swap to `@import "@wondo-app/choui/preset"` in a Tailwind
    host to re-theme.
 4. The `[dice]` tag lazy-loads `choui-three` and tumbles dice from
    `/assets/choui-three/` (vendored by the `dev`/`build` script).

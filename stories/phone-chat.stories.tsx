@@ -10,7 +10,7 @@
 
 import type { Story } from "@ladle/react";
 
-import { INLINE_TAG_PROPS } from "choui";
+import { INLINE_TAG_PROPS } from "@wondo-app/choui";
 
 import { argTypesFromSchema, makeTagStory, TagPreview } from "./_sandbox";
 

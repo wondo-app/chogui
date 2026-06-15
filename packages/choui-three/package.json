@@ -1,5 +1,5 @@
 {
-  "name": "choui-three",
+  "name": "@wondo-app/choui-three",
   "version": "0.1.0",
   "type": "module",
   "description": "Framework-agnostic 3D game-device engine (dice, spintop, board) that settles physics/tween animations onto a predetermined outcome. The three.js companion to choui; consumed lazily.",
@@ -23,6 +23,9 @@
     ".": "./src/index.ts",
     "./scripts/copy-assets.mjs": "./scripts/copy-assets.mjs",
     "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "typecheck": "tsc --noEmit",

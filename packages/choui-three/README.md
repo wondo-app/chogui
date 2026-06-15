@@ -72,8 +72,8 @@ Vendor the served assets into a host with the package-owned script (postinstall
 is a good home):
 
 ```sh
-node node_modules/choui-three/scripts/copy-assets.mjs            # → public/assets/choui-three/
-node node_modules/choui-three/scripts/copy-assets.mjs --dest static/choui  # custom dest
+node node_modules/@wondo-app/choui-three/scripts/copy-assets.mjs            # → public/assets/choui-three/
+node node_modules/@wondo-app/choui-three/scripts/copy-assets.mjs --dest static/choui  # custom dest
 ```
 
 Hosts that skip the copy can rely on the CDN fallback instead.

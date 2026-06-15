@@ -8,8 +8,8 @@
     "build": "node ../../scripts/copy-assets.mjs --dest public/assets/choui-three && vite build"
   },
   "dependencies": {
-    "choui": "^0.11.0",
-    "choui-three": "^0.1.0",
+    "@wondo-app/choui": "^0.11.0",
+    "@wondo-app/choui-three": "^0.1.0",
     "lucide-react": "^0.468.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

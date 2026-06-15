@@ -21,8 +21,8 @@ import { join } from "node:path";
 
 /** @type {{ name: string, attw: false | string[] }[]} */
 const PACKAGES = [
-	{ name: "choui", attw: ["--exclude-entrypoints", "css", "preset"] },
-	{ name: "choui-three", attw: false },
+	{ name: "@wondo-app/choui", attw: ["--exclude-entrypoints", "css", "preset"] },
+	{ name: "@wondo-app/choui-three", attw: false },
 ];
 
 const run = (cmd, args) =>
@@ -38,7 +38,8 @@ for (const { name, attw } of PACKAGES) {
 	}
 
 	console.log(`\n=== ${name}: attw (published tarball) ===`);
-	const dest = mkdtempSync(join(tmpdir(), `attw-${name}-`));
+	const slug = name.replace(/[@/]/g, "-");
+	const dest = mkdtempSync(join(tmpdir(), `attw-${slug}-`));
 	run("pnpm", ["--filter", name, "pack", "--pack-destination", dest]);
 	const tarball = readdirSync(dest).find((f) => f.endsWith(".tgz"));
 	if (!tarball) throw new Error(`no tarball produced for ${name} in ${dest}`);

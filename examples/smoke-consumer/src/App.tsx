@@ -14,7 +14,7 @@ import {
 	gamePack,
 	Icon,
 	registerInlineTags,
-} from "choui";
+} from "@wondo-app/choui";
 
 registerInlineTags(coreInlineTags);
 registerInlineTags(gamePack);

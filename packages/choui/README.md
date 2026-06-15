@@ -18,7 +18,7 @@ set. Enabling a tag is a build-time action, not an author or end-user one.
 ## Install
 
 ```sh
-npm install choui choui-three
+npm install @wondo-app/choui @wondo-app/choui-three
 ```
 
 Peers: `react` ≥ 18, `react-dom` ≥ 18, `lucide-react` (the `[icon]` glyphs).
@@ -34,7 +34,7 @@ The library ships its opinionated DaisyUI look two ways. Pick one:
   it and the components look right with no Tailwind toolchain of your own:
 
   ```ts
-  import "choui/css";
+  import "@wondo-app/choui/css";
   ```
 
 - **`./preset` — re-themeable.** A Tailwind v4 fragment for consumers who run
@@ -44,8 +44,8 @@ The library ships its opinionated DaisyUI look two ways. Pick one:
 
   ```css
   @import "tailwindcss";
-  @import "choui/preset";
-  @source "../node_modules/choui/dist";
+  @import "@wondo-app/choui/preset";
+  @source "../node_modules/@wondo-app/choui/dist";
   @plugin "daisyui/theme" { name: "brand"; default: true; /* … */ }
   ```
 
@@ -71,7 +71,7 @@ a parameter with a neutral default — supply your own so existing authored/pers
 markup renders unchanged:
 
 ```ts
-import { createStoryMarkup } from "choui/markup";
+import { createStoryMarkup } from "@wondo-app/choui/markup";
 const StoryMarkup = createStoryMarkup({ prefix: "mygame-" }); // default: "ui-"
 ```
 
@@ -87,7 +87,7 @@ import {
   kbdPack,
   registerInlineTags,
   registerSampleRuntimePacks,
-} from "choui/markup";
+} from "@wondo-app/choui/markup";
 
 registerInlineTags(coreInlineTags);
 registerInlineTags(kbdPack);
@@ -117,6 +117,6 @@ API for host CSS.
 
 The dice/spintop devices fetch textures and sounds at runtime from
 `choui-three`'s `resolveAssetPath()` (default `/assets/choui-three/`). Either
-vendor the assets — `node node_modules/choui-three/scripts/copy-assets.mjs`, a
+vendor the assets — `node node_modules/@wondo-app/choui-three/scripts/copy-assets.mjs`, a
 good `postinstall` step — or use the jsDelivr CDN fallback (`preferCdn`). The 3D
 path degrades gracefully to each tag's non-3D fallback if the engine can't load.
