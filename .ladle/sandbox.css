@@ -1,0 +1,13 @@
+/* Tailwind entry for the Ladle catalog.
+ *
+ * Ladle runs Vite with its own root (inside the @ladle package), so Tailwind
+ * v4's automatic source detection never reaches the package source and emits
+ * none of the utilities the tags use. We pull in Tailwind + the library's
+ * re-themeable preset (which enables DaisyUI with the neutral light/dark
+ * themes), then declare the source dirs explicitly. `@source` paths resolve
+ * relative to this file, so they're independent of whatever root Ladle picks. */
+@import "tailwindcss";
+@import "../packages/choui/styles/preset.css";
+
+@source "../packages/choui/src";
+@source "../stories";

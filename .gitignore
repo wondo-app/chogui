@@ -1,0 +1,10 @@
+node_modules/
+dist/
+build/
+.ladle/build/
+# Vendored at postinstall/ladle by scripts/copy-assets.mjs — a build artifact.
+public/assets/
+*.log
+.DS_Store
+.turbo/
+coverage/

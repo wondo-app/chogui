@@ -1,0 +1,61 @@
+# choui
+
+An opinionated, host-agnostic **game-UI library for interactive fiction**: curated
+inline + runtime story-tag packs, DaisyUI game components, a bracket-markup
+renderer, and a 3D device engine (dice, spintop, board). Bundled at build time —
+no runtime tag loading. Usable by any JavaScript game; the
+[Wondo](https://wondo.app) reader is its first consumer.
+
+## Packages
+
+This is a pnpm-workspace monorepo holding two packages that **version and publish
+together**:
+
+| Package | What it is |
+| --- | --- |
+| [`choui`](packages/choui) | The library: inline/runtime tag packs, DaisyUI components, the `StoryMarkup` renderer, the tag manifest + prop schema, and the precompiled/re-themeable CSS. Subpath exports: `.` · `./markup` · `./ui` · `./manifest` · `./props` · `./css` · `./preset`. |
+| [`choui-three`](packages/choui-three) | The framework-agnostic 3D device engine (three.js + cannon-es) that `choui` lazy-loads for the `dice`/`spintop`/`board` tags. Ships its runtime `assets/` (textures, sounds, models) and a `copy-assets.mjs` host-vendoring script. |
+
+`choui` depends on `choui-three` (`workspace:*` in-repo). **Neither ships without
+the other**: a published `choui` always pins the just-published `choui-three`
+version, and a coordinated `changeset publish` releases both in one run
+(`choui-three` first, then `choui`). See [`.changeset/README.md`](.changeset/README.md).
+
+## Develop
+
+```bash
+pnpm install
+pnpm -r build      # build choui (tsup + Tailwind CSS); choui-three is source-only
+pnpm -r test       # run both packages' test suites
+pnpm ladle:dev     # the component catalog (Ladle), against the package sources
+```
+
+## Catalog & docs
+
+The [Ladle](https://ladle.dev) catalog (`.ladle/`, `stories/`) renders every tag
+through the **real** `StoryMarkup` render path — the same code the reader runs —
+so "renders in the catalog" means "renders in a host." It imports the `choui`
+workspace package directly. Dice/board assets are vendored into `public/` by
+`scripts/copy-assets.mjs` (re-run on `ladle:dev`/`ladle:build`).
+
+## Release
+
+1. `pnpm changeset` — describe the change (include both packages when shared).
+2. `pnpm version` (`changeset version`) — applies version bumps + rewrites the
+   internal `workspace:*` to a pinned range.
+3. `pnpm release` (`pnpm -r build && changeset publish`) — coordinated publish to
+   npm.
+
+## Consuming from a host
+
+```bash
+npm install choui choui-three
+# Vendor the 3D engine's runtime assets into your static dir:
+node node_modules/choui-three/scripts/copy-assets.mjs   # → public/assets/choui-three/
+```
+
+`choui` ships precompiled CSS (`import "choui/css"`) for zero-config hosts, and a
+re-themeable Tailwind v4 preset (`@import "choui/preset"`) for hosts that own
+their Tailwind build. The `StoryMarkup` renderer takes a configurable
+custom-element `prefix`, so a host can namespace the emitted tags (Wondo uses
+`prefix: "wondo-"`).

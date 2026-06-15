@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-test:
+    name: build · test · lint · catalog
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build packages
+        run: pnpm -r build
+
+      - name: Test packages
+        run: pnpm -r test
+
+      - name: Lint published export surface (publint + attw)
+        run: pnpm lint:packages
+
+      - name: Build the component catalog (Ladle)
+        run: pnpm ladle:build
+
+      # Screenshot regression: the visual-regression gallery is specified in
+      # openspec/changes/add-visual-regression-gallery but not yet implemented.
+      # When it lands, add its run here (it consumes the `ladle:build` output).
