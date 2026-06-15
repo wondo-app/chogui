@@ -35,8 +35,8 @@ jobs:
 
       # Opens/updates a "Version Packages" PR when changesets are pending; when
       # that PR merges, runs `pnpm release` (build + `changeset publish`), which
-      # rewrites the internal choui-three `workspace:*` to the pinned published
-      # version and publishes choui-three then choui to npm in one coordinated run.
+      # rewrites the internal chogui-three `workspace:*` to the pinned published
+      # version and publishes chogui-three then chogui to npm in one coordinated run.
       - name: Create release PR or publish
         uses: changesets/action@v1
         with:

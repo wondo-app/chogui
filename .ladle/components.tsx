@@ -10,7 +10,7 @@
 //   2. Pack-shipped CSS injection. Importing the catalog bootstrap
 //      (`../stories/_bootstrap`) registers every pack (core + samples), which
 //      compiles each pack's `?inline` CSS into the style registry; we inject the
-//      collected string as `<style data-choui-tag-styles>` exactly as a host's
+//      collected string as `<style data-chogui-tag-styles>` exactly as a host's
 //      reader does. So a tag with its own CSS (the `fx` sample) looks here as it
 //      would in a host.
 
@@ -24,7 +24,7 @@ export const Provider = ({ children }: { children: ReactNode }) => {
 	const tagStyles = getRegisteredTagStyles();
 	return (
 		<div data-theme="light" className="min-h-screen bg-base-100 px-6 py-10 text-base-content">
-			{tagStyles ? <style data-choui-tag-styles>{tagStyles}</style> : null}
+			{tagStyles ? <style data-chogui-tag-styles>{tagStyles}</style> : null}
 			<div className="mx-auto max-w-2xl">{children}</div>
 		</div>
 	);

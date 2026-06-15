@@ -11,9 +11,9 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default {
 	plugins: [tailwindcss()],
-	// Serve the repo's public/ (where choui-three assets are vendored by
+	// Serve the repo's public/ (where chogui-three assets are vendored by
 	// scripts/copy-assets.mjs). Ladle runs Vite from its own root, so this
-	// must be an absolute path or the catalog 404s /assets/choui-three/*.
+	// must be an absolute path or the catalog 404s /assets/chogui-three/*.
 	publicDir: resolve(process.cwd(), "public"),
 	// Dev sandbox is often viewed through a Cloudflare quick tunnel, whose
 	// subdomain rotates each run; allow the whole domain so the host check

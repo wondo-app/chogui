@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "description": "Monorepo for choui (game-UI story-tag library) and choui-three (its 3D companion engine). The two packages version and publish together.",
+  "description": "Monorepo for chogui (game-UI story-tag library) and chogui-three (its 3D companion engine). The two packages version and publish together.",
   "license": "MIT",
   "packageManager": "pnpm@11.4.0",
   "scripts": {

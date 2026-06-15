@@ -7,7 +7,7 @@
  * themes), then declare the source dirs explicitly. `@source` paths resolve
  * relative to this file, so they're independent of whatever root Ladle picks. */
 @import "tailwindcss";
-@import "../packages/choui/styles/preset.css";
+@import "../packages/chogui/styles/preset.css";
 
-@source "../packages/choui/src";
+@source "../packages/chogui/src";
 @source "../stories";

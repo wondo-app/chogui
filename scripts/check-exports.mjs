@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 // Export-surface gate for the published packages: publint + are-the-types-wrong.
 //
-// `publint` runs on both packages. `attw` runs only on `choui` — it is the built
+// `publint` runs on both packages. `attw` runs only on `chogui` — it is the built
 // package that ships `.d.ts`, and it is ESM-only, so we use the `esm-only`
 // profile (node10 + CJS expectations don't apply) and exclude the CSS-only
-// entrypoints (which attw can't resolve to types/JS by design). `choui-three` is
+// entrypoints (which attw can't resolve to types/JS by design). `chogui-three` is
 // deliberately source-only (ships raw `.ts`, no build step; consumed through
 // bundlers that compile it, e.g. Vite), so attw's compiled-output / Node ESM
 // resolution checks don't apply to it — publint is its gate.

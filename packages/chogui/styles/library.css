@@ -1,0 +1,16 @@
+/* `chogui` — precompiled zero-config stylesheet (the `./css` export).
+ *
+ * Tailwind v4 + DaisyUI with the library's neutral default theme, scanning the
+ * package's own components for every utility/component class they reference. A
+ * consumer with no Tailwind toolchain imports the built `dist/style.css` and the
+ * components look right out of the box. `@source` is relative to this file.
+ *
+ * Use this OR the re-themeable `./preset` — not both (see README). */
+
+@import "tailwindcss";
+
+@plugin "daisyui" {
+	themes: light --default, dark --prefersdark;
+}
+
+@source "../src";

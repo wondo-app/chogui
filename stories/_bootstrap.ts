@@ -1,6 +1,6 @@
 // Catalog bootstrap — composes the library's tag packs for the Ladle sandbox.
 //
-// The `choui` barrel is side-effect-free: importing it registers nothing. This
+// The `chogui` barrel is side-effect-free: importing it registers nothing. This
 // module is the catalog's *bootstrap*, the standalone-repo twin of a host's own
 // bootstrap (Wondo's `src/lib/story/tags.ts`). Importing it composes the packs in
 // a representative order — core first, then the sample community packs that can

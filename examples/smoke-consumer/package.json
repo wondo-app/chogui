@@ -1,11 +1,11 @@
 {
-  "name": "choui-smoke-consumer",
+  "name": "chogui-smoke-consumer",
   "private": true,
   "type": "module",
-  "description": "Throwaway Vite+React consumer that installs the PUBLISHED choui from npm (no host Tailwind) to smoke-test the release. Not part of the workspace — run after publish.",
+  "description": "Throwaway Vite+React consumer that installs the PUBLISHED chogui from npm (no host Tailwind) to smoke-test the release. Not part of the workspace — run after publish.",
   "scripts": {
-    "dev": "node ../../scripts/copy-assets.mjs --dest public/assets/choui-three && vite",
-    "build": "node ../../scripts/copy-assets.mjs --dest public/assets/choui-three && vite build"
+    "dev": "node ../../scripts/copy-assets.mjs --dest public/assets/chogui-three && vite",
+    "build": "node ../../scripts/copy-assets.mjs --dest public/assets/chogui-three && vite build"
   },
   "dependencies": {
     "chogui": "^0.11.0",
