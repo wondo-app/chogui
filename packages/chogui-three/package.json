@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wondo-app/choui.git",
+    "url": "git+https://github.com/wondo-app/chogui.git",
     "directory": "packages/chogui-three"
   },
   "sideEffects": false,
