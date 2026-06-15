@@ -8,10 +8,10 @@ importers:
 
   .:
     dependencies:
-      '@wondo-app/choui':
+      chogui:
         specifier: workspace:*
         version: link:packages/choui
-      '@wondo-app/choui-three':
+      chogui-three:
         specifier: workspace:*
         version: link:packages/choui-three
     devDependencies:
@@ -63,7 +63,7 @@ importers:
 
   packages/choui:
     dependencies:
-      '@wondo-app/choui-three':
+      chogui-three:
         specifier: workspace:*
         version: link:../choui-three
       html-react-parser:

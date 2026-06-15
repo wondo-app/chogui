@@ -1,8 +1,8 @@
 {
-  "name": "@wondo-app/choui",
+  "name": "chogui",
   "version": "0.11.0",
   "type": "module",
-  "description": "Curated inline + runtime story-tag packs and DaisyUI game-UI components for interactive fiction readers. Bundled at build time; no runtime tag loading. The three.js companion engine ships as `choui-three`.",
+  "description": "Curated inline + runtime story-tag packs and DaisyUI game-UI components for interactive fiction readers. Bundled at build time; no runtime tag loading. The three.js companion engine ships as `chogui-three`.",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -29,7 +29,6 @@
     "./package.json": "./package.json"
   },
   "publishConfig": {
-    "access": "public",
     "exports": {
       ".": {
         "types": "./dist/index.d.ts",
@@ -63,7 +62,7 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@wondo-app/choui-three": "workspace:*",
+    "chogui-three": "workspace:*",
     "html-react-parser": "~6.1.2"
   },
   "peerDependencies": {

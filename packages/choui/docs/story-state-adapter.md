@@ -5,7 +5,7 @@ The interactive tags don't know about any story engine. They read and write
 and the library drives your engine.
 
 ```ts
-import type { StoryStateAdapter } from "@wondo-app/choui";
+import type { StoryStateAdapter } from "chogui";
 
 interface StoryStateAdapter {
   readVariable(name: string): number | string | boolean | undefined;

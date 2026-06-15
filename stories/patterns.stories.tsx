@@ -13,7 +13,7 @@
 
 import type { Story } from "@ladle/react";
 
-import { DiceRoller } from "@wondo-app/choui";
+import { DiceRoller } from "chogui";
 
 import { TagPreview } from "./_sandbox";
 

@@ -7,7 +7,7 @@ export const DEFAULT_ASSET_PATH = "/assets/choui-three/";
 
 // jsDelivr-hosted package assets — the zero-config fallback.
 export const CDN_ASSET_PATH =
-  "https://cdn.jsdelivr.net/npm/choui-three/assets/";
+  "https://cdn.jsdelivr.net/npm/chogui-three/assets/";
 
 export interface ResolveAssetPathOptions {
   /** Use the CDN fallback instead of the host-vendored default. */

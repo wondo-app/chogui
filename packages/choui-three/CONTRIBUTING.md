@@ -47,7 +47,7 @@ export interface MyDeviceProps extends DeviceProps {
 
 ```ts
 import { Mesh, BoxGeometry, MeshStandardMaterial } from "three";
-import type { Device, DeviceContext, DeviceProps } from "@wondo-app/choui-three";
+import type { Device, DeviceContext, DeviceProps } from "chogui-three";
 
 export interface FlipDeviceProps extends DeviceProps {
   value: number; // 0 or 1
@@ -98,7 +98,7 @@ The barrel has **no import side effects** — devices are not auto-registered. U
 your device either way:
 
 ```ts
-import { Stage, registerDevice, createDevice } from "@wondo-app/choui-three";
+import { Stage, registerDevice, createDevice } from "chogui-three";
 import { FlipDevice } from "./FlipDevice";
 
 // Direct (what choui's tags do):

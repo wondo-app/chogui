@@ -21,8 +21,8 @@ import { join } from "node:path";
 
 /** @type {{ name: string, attw: false | string[] }[]} */
 const PACKAGES = [
-	{ name: "@wondo-app/choui", attw: ["--exclude-entrypoints", "css", "preset"] },
-	{ name: "@wondo-app/choui-three", attw: false },
+	{ name: "chogui", attw: ["--exclude-entrypoints", "css", "preset"] },
+	{ name: "chogui-three", attw: false },
 ];
 
 const run = (cmd, args) =>

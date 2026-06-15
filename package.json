@@ -1,5 +1,5 @@
 {
-  "name": "@wondo-app/choui-monorepo",
+  "name": "chogui-monorepo",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -20,8 +20,8 @@
     "release": "pnpm -r build && changeset publish"
   },
   "dependencies": {
-    "@wondo-app/choui": "workspace:*",
-    "@wondo-app/choui-three": "workspace:*"
+    "chogui": "workspace:*",
+    "chogui-three": "workspace:*"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.3",

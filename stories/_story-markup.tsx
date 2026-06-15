@@ -9,7 +9,7 @@
 // ⚠️ CLIENT-ONLY: the renderer uses html-react-parser (needs the DOM). Ladle
 // renders in the browser, so this is fine in the sandbox.
 
-import { createStoryMarkup, type StoryMarkupProps } from "@wondo-app/choui/markup";
+import { createStoryMarkup, type StoryMarkupProps } from "chogui/markup";
 
 import "./_bootstrap";
 

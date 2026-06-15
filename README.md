@@ -13,10 +13,10 @@ together**:
 
 | Package (npm) | What it is |
 | --- | --- |
-| [`@wondo-app/choui`](packages/choui) | The library: inline/runtime tag packs, DaisyUI components, the `StoryMarkup` renderer, the tag manifest + prop schema, and the precompiled/re-themeable CSS. Subpath exports: `.` · `./markup` · `./ui` · `./manifest` · `./props` · `./css` · `./preset`. |
-| [`@wondo-app/choui-three`](packages/choui-three) | The framework-agnostic 3D device engine (three.js + cannon-es) that `choui` lazy-loads for the `dice`/`spintop`/`board` tags. Ships its runtime `assets/` (textures, sounds, models) and a `copy-assets.mjs` host-vendoring script. |
+| [`chogui`](packages/choui) | The library: inline/runtime tag packs, DaisyUI components, the `StoryMarkup` renderer, the tag manifest + prop schema, and the precompiled/re-themeable CSS. Subpath exports: `.` · `./markup` · `./ui` · `./manifest` · `./props` · `./css` · `./preset`. |
+| [`chogui-three`](packages/choui-three) | The framework-agnostic 3D device engine (three.js + cannon-es) that `choui` lazy-loads for the `dice`/`spintop`/`board` tags. Ships its runtime `assets/` (textures, sounds, models) and a `copy-assets.mjs` host-vendoring script. |
 
-> The two packages are **scoped** (`@wondo-app/*`); the directories and brand name stay `choui`.
+> The npm package names are `chogui` / `chogui-three`; the repo directories stay `packages/choui*`.
 
 `choui` depends on `choui-three` (`workspace:*` in-repo). **Neither ships without
 the other**: a published `choui` always pins the just-published `choui-three`
@@ -51,13 +51,13 @@ workspace package directly. Dice/board assets are vendored into `public/` by
 ## Consuming from a host
 
 ```bash
-npm install @wondo-app/choui @wondo-app/choui-three
+npm install chogui chogui-three
 # Vendor the 3D engine's runtime assets into your static dir:
-node node_modules/@wondo-app/choui-three/scripts/copy-assets.mjs   # → public/assets/choui-three/
+node node_modules/chogui-three/scripts/copy-assets.mjs   # → public/assets/choui-three/
 ```
 
-`choui` ships precompiled CSS (`import "@wondo-app/choui/css"`) for zero-config hosts, and a
-re-themeable Tailwind v4 preset (`@import "@wondo-app/choui/preset"`) for hosts that own
+`choui` ships precompiled CSS (`import "chogui/css"`) for zero-config hosts, and a
+re-themeable Tailwind v4 preset (`@import "chogui/preset"`) for hosts that own
 their Tailwind build. The `StoryMarkup` renderer takes a configurable
 custom-element `prefix`, so a host can namespace the emitted tags (Wondo uses
 `prefix: "wondo-"`).

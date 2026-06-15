@@ -27,6 +27,6 @@ export default defineConfig({
 		"react/jsx-runtime",
 		"lucide-react",
 		"html-react-parser",
-		"@wondo-app/choui-three",
+		"chogui-three",
 	],
 });
