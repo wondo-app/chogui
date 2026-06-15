@@ -1,6 +1,6 @@
 {
   "name": "chogui",
-  "version": "0.12.0",
+  "version": "0.12.1",
   "type": "module",
   "description": "Curated inline + runtime story-tag packs and DaisyUI game-UI components for interactive fiction readers. Bundled at build time; no runtime tag loading. The three.js companion engine ships as `chogui-three`.",
   "license": "MIT",

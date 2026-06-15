@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.12.1
+
+### Patch Changes
+
+- Republish fix: `0.12.0` was published with `npm publish`, which does not rewrite
+  the `workspace:*` protocol, so its `chogui-three` dependency shipped as the
+  unresolvable `workspace:*` instead of the pinned `0.2.0`. No code change — this
+  republish (via `pnpm publish`) pins `chogui-three@0.2.0`. `0.12.0` is deprecated.
+
 ## 0.12.0
 
 ### Minor Changes
